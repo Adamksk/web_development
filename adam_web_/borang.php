@@ -13,6 +13,8 @@ jC" crossorigin="anonymous">
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="style.css">
 <script src="https://kit.fontawesome.com/5a53d05429.js" crossorigin="anonymous"></script>
+</body>
+</head>
 
 <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,7 +26,7 @@ jC" crossorigin="anonymous">
           <div class="nav justify-content-end" id="navbarSupportedContent" >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
               </li>
 
               <!--dropdown-->
@@ -58,76 +60,34 @@ jC" crossorigin="anonymous">
       <hr class="my-5" />
 
       <!--Section: Content-->
-      <section class="mb-5">
-        <h4 class="mb-5 text-center"><strong>Borang Tempahan</strong></h4>
-
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-6">
-            <form>
-              <!-- 2 column grid layout with text inputs for the first and last names -->
-              <div class="form-outline mb-4">
-                <input type="email" id="form3Example3" class="form-control" />
-                <label class="form-label" for="form3Example2">Name</label>
-              </div>
-
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <input type="email" id="form3Example3" class="form-control" />
-                <label class="form-label" for="form3Example3">Email address</label>
-              </div>
-
-               <!-- Adult input -->
-              <div class="row">
-            <div class="col-md-20 mb-4">
-                <div class="form-control d-flex flex-column">
-                    <p class="h-blue">Bilangan</p> <select class="border-0 outline-none">
-                        <option value="" hidden selected>0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
-                </div>
-            </div>
-
-              <!-- Checkbox -->
-              <div class="form-check d-flex justify-content-center mb-4">
-                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" checked />
-                <label class="form-check-label" for="form2Example3">
-                  Subscribe to our newsletter
-                </label>
-              </div>
-              
-
-              <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      <form action="proses.bilanganjam.php" method="POST" class="row g-3">
+  <div class="col-md-12">
+    <label for="inputname" class="form-label">Nama</label>
+    <input type="text" class="form-control"  name="nama" id="inputnama">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+  <div class="col-md-12">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" name="email" id="inputEmail4">
+  </div>
+  <div class="col-md-12">
+    <label for="inputbilangan" class="form-label">bilangan</label>
+    <select name="bilangan" class="form-select">
+      <option selected>0</option>
+      <option>1</option>
+      <option>2</option>
+    </select>
+  </div>
+  <!-- end section-->
+  
+  
+ 
+  <div class="col-12">
+    <button type="submit" name="tempah" class="btn btn-primary">Tempah</button>
+    <a href="read.php">jumlah jam</a>
+    <br>
+</div>
 
-              <!-- Register buttons -->
-              <div class="text-center">
-                <p>or sign up with:</p>
-                <button type="button" class="btn btn-primary btn-floating mx-1">
-                  <i class="fab fa-facebook-f"></i>
-                </button>
-
-                <button type="button" class="btn btn-primary btn-floating mx-1">
-                  <i class="fab fa-google"></i>
-                </button>
-
-                <button type="button" class="btn btn-primary btn-floating mx-1">
-                  <i class="fab fa-twitter"></i>
-                </button>
-
-                <button type="button" class="btn btn-primary btn-floating mx-1">
-                  <i class="fab fa-github"></i>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
+    
 
       <div class="container-fluid">
         <!-- Footer -->
@@ -260,6 +220,6 @@ jC" crossorigin="anonymous">
       </div>
       <!-- End of .container -->
       
-    
+
 </body>
 </head>
